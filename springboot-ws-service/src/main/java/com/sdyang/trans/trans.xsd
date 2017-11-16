@@ -1,0 +1,108 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://webservice.tfc.tmri.com"
+           elementFormDefault="qualified">
+
+    <xs:element name="InitTransRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="kkbh" type="xs:string"/>
+				<xs:element name="fxlx" type="xs:string"/>
+				<xs:element name="cdh" type="xs:long"/>
+				<xs:element name="info" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="InitTransResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="InitTransReturn" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="WriteVehicleInfoRequest">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="kkbh" type="xs:string"/>
+            <xs:element name="fxlx" type="xs:string"/>
+            <xs:element name="cdh" type="xs:string"/>
+            <xs:element name="hphm" type="xs:string"/>
+			 <xs:element name="hpzl" type="xs:string"/>
+			  <xs:element name="gcsj" type="xs:string"/>
+			  <xs:element name="clsd" type="xs:long"/>
+			  <xs:element name="clxs" type="xs:long"/>
+			  <xs:element name="wfdm" type="xs:string"/>
+			  <xs:element name="cwkc" type="xs:long"/>
+			  <xs:element name="hpys" type="xs:string"/>
+			  <xs:element name="cllx" type="xs:string"/>
+			  <xs:element name="fzhpzl" type="xs:string"/>
+			  <xs:element name="fzhphm" type="xs:string"/>
+			  <xs:element name="fzhpys" type="xs:string"/>
+			  <xs:element name="clpp" type="xs:string"/>
+			  <xs:element name="clwx" type="xs:string"/>
+			  <xs:element name="csys" type="xs:string"/>
+			  <xs:element name="tplj" type="xs:string"/>
+			  <xs:element name="tp1" type="xs:string"/>
+			  <xs:element name="tp2" type="xs:string"/>
+			  <xs:element name="tp3" type="xs:string"/>
+			  <xs:element name="tztp" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="WriteVehicleInfoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="WriteVehicleInfoReturn" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="QueryLimitSpeedRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="kkbh" type="xs:string"/>
+				<xs:element name="fxlx" type="xs:string"/>
+				<xs:element name="cdh" type="xs:long"/>
+				<xs:element name="cllx" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="QueryLimitSpeedResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="QueryLimitSpeedReturn" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="QuerySyncTimeRequest">
+        <xs:complexType>          
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="QuerySyncTimeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="QuerySyncTimeReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="GetLastMessageRequest">
+        <xs:complexType>          
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="GetLastMessageResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="GetLastMessageReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+</xs:schema>
